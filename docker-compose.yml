@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dev-consul:
+    image: "consul"
+    ports:
+     - "8500:8500"
+  caller:
+    image: "lagom-consul/call"
+    ports:
+    - "8080:8080"
+    depends_on:
+      - dev-consul  
+  hello:
+    image: "lagom-consul/hello"
+    depends_on:
+      - dev-consul
+    
