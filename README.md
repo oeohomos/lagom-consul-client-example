@@ -7,6 +7,9 @@ This is a sample project for [lagom-consul-client](https://github.com/olapeterss
 ### Prereq:
 Docker and docker compose is needed to spin up services and the consul server. 
 
+As the [lagom-consul-client](https://github.com/olapetersson-lagom-consul-client/lagom-consul-client) is not on
+maven central you will also need to clone and build it (`mvn clean install`)
+
 ### Run it 
 
 `mvn clean install` will build your services and produce two docker containers,
